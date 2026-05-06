@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>gurukulclassesiit</title>
+    <link rel="shortcut icon" type="x-icon" href="Giri Siri’s.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>  
+    <section class="header">
+        <nav>
+            <a href="#"><img src="sai.jpeg" width="220" height="60"></a>
+            <div class="nav-links">
+              <i class="bi bi-x-circle-fill" onclick="hideMenu()"></i>
+              <ul class="nav-list">
+                <li><a href="index.htm">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">About +</a>
+                    <ul class="dropdown-content">
+                        <li><a href="About.htm">About Us</a></li>
+                        <li><a href="founder.htm">Founder's Message</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropbtn">Course +</a>
+                  <ul class="dropdown-content">
+                      <li><a href="engg.htm">Engineer</a></li>
+                      <li><a href="medical.htm">Medical</a></li>
+                      <li><a href="carrer.htm">Career Foundation</a></li>
+                  </ul>
+                  <li class="dropdown">
+                    <a href="#" class="dropbtn">Admission +</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Pay Fee</a></li>
+                        <li><a href="#">Admission Procedure</a></li>
+                        <li><a href="#">Online Application Form</a></li>
+                   
+                    </ul>
+                   <li class="dropdown">
+                    <a href="#" class="dropbtn">Class Test +</a>
+                         <ul class="dropdown-content">
+                         <a href="#" class="dropbtn">Mock Test +</a>
+                          <li><a href="mock.htm">11th JEE / NEET Mock Test</a></li>
+                          <li><a href="12mook.htm">12th JEE / NEET Mock Test</a></li>
+                        
+                    </ul>
+                    <li class="dropdown">
+                    <a href="#" class="dropbtn">Result +</a>
+                    <ul class="dropdown-content">
+                        <li><a href="https://neet.ntaonline.in/frontend/web/scorecard/index">NEET 2024 Result </a></li>
+                        <li><a href="https://jeemainsession2.ntaonline.in/frontend/web/scorecard/index">Result JEE Main 2020</a></li>
+                        <li><a href="https://cetcell.mahacet.org/">Engineering Students</a></li>
+                        <li><a href="https://neet.ntaonline.in/frontend/web/scorecard/index">NEET 2023 Result</a></li>
+                        <li><a href="https://mahresult.nic.in/hscjul2024/hscjul2024.htm">12th Board Result 2020</a></li>
+                    </ul>
+                <li><a href="#">Downlods +</a></li>
+                <li><a href="Contact.htm">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="top-header ">
+            <div class="container">
+            <div class="width-1">
+            <b class="news-list">News Update</b>
+            <marquee class="quote" onmouseout="start()" onmousemove="stop()" > 
+              <img src="index.gif">
+               <a href="https://docs.google.com/forms/d/12lTBN-crryuzbkcXQZ3IjQVgk1JhaydXASczT7rjmuM/edit#responses" target="_blank" style="color: white;">Admission Open 2025 GPAT For Class 7th to 10th</a> 
+               <img src="index.gif">
+              <img src="index.gif">
+               <a href="https://docs.google.com/forms/u/6/d/17WH1rEXbpBEUcG_KlJijHJhSMGTcZW1WUBKUQToqWTI/edit?pli=1" target="_blank" style="color: white;">G-PAT Exam Registration 2025</a> 
+               <img src="index.gif">
+              </marquee>
+                    
+            </div>
+            </div>
+            </div>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #f0f8ff, #ffffff);
+  }
+
+  /* --- Button Section --- */
+  .button-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  .button-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    width: 90%;
+    max-width: 1000px;
+  }
+
+  .outline {
+    --c: #0b76ff;
+    background: transparent;
+    color: var(--c);
+    border: 2px solid rgba(11, 118, 255, 0.3);
+    padding: 0.8rem 1.4rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 14px rgba(11, 118, 255, 0.1);
+    width: 100%;
+    text-align: center;
+  }
+
+  .outline:hover {
+    background: rgba(11, 118, 255, 0.08);
+    transform: translateY(-3px);
+    border-color: var(--c);
+    box-shadow: 0 10px 24px rgba(11, 118, 255, 0.2);
+  }
+
+  .outline:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px rgba(11, 118, 255, 0.15);
+  }
+
+  /* --- Responsive Breakpoints --- */
+  @media (max-width: 992px) {
+    .button-container {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 90px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .button-section {
+      padding: 40px 10px;
+    }
+
+    .outline {
+      font-size: 0.95rem;
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .button-container {
+      grid-template-columns: 1fr;
+    }
+    .outline {
+      font-size: 0.9rem;
+      width: 100%;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+  
+
+  <!-- ✅ Button Section -->
+  <section class="button-section">
+    <div class="button-container">
+      <button class="outline" onclick="location.href='#'">11th JEE Main Test 1</button>
+      <button class="outline" onclick="location.href=''">11th JEE Main Test 2</button>
+      <button class="outline" onclick="location.href=''">11th JEE Main Test 3</button>
+      <button class="outline" onclick="location.href=''">11th JEE Main Test 4</button>
+      <button class="outline" onclick="location.href=''">11th JEE Advanced 1</button>
+      <button class="outline" onclick="location.href=''">11th JEE Advanced 2</button>
+      <button class="outline" onclick="location.href=''">11th JEE Advanced 3</button>
+      <button class="outline" onclick="location.href=''">11th JEE Advanced 4</button>
+      <button class="outline" onclick="location.href=''">11th NEET 1</button>
+      <button class="outline" onclick="location.href=''">11th NEET 2</button>
+      <button class="outline" onclick="location.href=''">11th NEET 3</button>
+      <button class="outline" onclick="location.href=''">11th NEET 4</button>
+      <button class="outline" onclick="location.href=''">11th NEET 5</button>
+      <button class="outline" onclick="location.href=''">11th NEET 6</button>
+    </div>
+  </section>
+</body>
+</html>
+

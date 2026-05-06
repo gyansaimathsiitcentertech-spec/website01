@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" 
+  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <title>GyanSaimathsiit</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>  
+    <section class="header-us">
+        <nav>
+                   <img src="sai.jpeg" width="100" height="100" alt="GYANSAI MATHS IIT CENTER Logo" />
+            <div class="nav-links">
+              <i class="bi bi-x-circle-fill" onclick="hideMenu()"></i>
+              <ul class="nav-list">
+                <li><a href="index.htm">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">About +</a>
+                    <ul class="dropdown-content">
+                        <li><a href="About.htm">About Us</a></li>
+                        <li><a href="founder.htm">Founder's Message</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropbtn">Course +</a>
+                  <ul class="dropdown-content">
+                      <li><a href="engg.htm">Engineer</a></li>
+                      <li><a href="medical.htm">Medical</a></li>
+                      <li><a href="carrer.htm">Career Foundation</a></li>
+                  </ul>
+                  <li class="dropdown">
+                    <a href="#" class="dropbtn">Admission +</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Pay Fee</a></li>
+                        <li><a href="#">Admission Procedure</a></li>
+                        <li><a href="#">Online Application Form</a></li>
+                        
+                    </ul>
+                    <li class="dropdown">
+                    <a href="#" class="dropbtn">Result +</a>
+                    <ul class="dropdown-content">
+                        
+                    </ul>
+                <li><a href="#">Downlods +</a></li>
+                <li><a href="Contact.htm">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="top-header-us">
+            <div class="container">
+            <div class="width-1">
+            <b class="news-list">Fllow Location </b>
+
+            </div>
+            </div>
+            </div>
+        </section>
+        <div class="location">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.305516298486!2d75.3286931!3d19.869317199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdba398dc72322b%3A0xc11370cf2878c407!2sGyansai%20Maths%20IIT%20Center!5e0!3m2!1sen!2sin!4v1778062386585!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="information-back">
+       
+          <div class="contact_us_6">
+            <div class="responsive-container-block container">
+                  <style>
+                      body {
+                          font-family: Arial, sans-serif;
+                          margin: 0px;
+                      }
+                      .input, .textinput {
+                          width: 100%;
+                          padding: 10px;
+                          margin-bottom: 10px;
+                          border: 1px solid #ccc;
+                          border-radius: 4px;
+                      }
+                      .submit-btn {
+                          padding: 10px;
+                          background-color: #28a745;
+                          color: white;
+                          border: none;
+                          border-radius: 4px;
+                          cursor: pointer;
+                      }
+                      .submit-btn:hover {
+                          background-color: #218838;
+                      }
+                      .response-message {
+                          margin-top: 10px;
+                      }
+                  </style>
+              </head>
+              <body>
+              
+             </style>
+        </head>
+        <body>
+        
+        <div class="information-back">
+            
+            <div class="contact_us_6">
+              <div class="responsive-container-block container">
+                <form id="contact-form">
+                  <div class="container-block form-wrapper">
+                    <div class="mob-text">
+                      <p class="text-blk contactus-head">Get in Touch</p>
+                      <p class="text-blk contactus-subhead"></p>
+                    </div>
+                    <div class="responsive-container-block" id="i2cbk">
+                      <div class="responsive-cell-block" id="i10mt-3">
+                        <p class="text-blk input-title">FIRST NAME</p>
+                        <input class="input" id="ijowk-3" name="FirstName" placeholder="Please enter first name..." required>
+                      </div>
+                      <div class="responsive-cell-block" id="ip1yp">
+                        <p class="text-blk input-title">EMAIL</p>
+                        <input class="input" id="ipmgh-3" name="Email" placeholder="Please enter email..." required type="email">
+                      </div>
+                      <div class="responsive-cell-block" id="ih9wi">
+                        <p class="text-blk input-title">PHONE NUMBER</p>
+                        <input class="input" id="imgis-3" name="PhoneNumber" placeholder="Please enter phone number..." required type="tel">
+                      </div>
+                      <div class="responsive-cell-block" id="i634i-3">
+                        <p class="text-blk input-title">WHAT DO YOU HAVE IN MIND?</p>
+                        <textarea class="textinput" id="i5vyy-3" name="Message" placeholder="Please enter query..." required></textarea>
+                      </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                  </div>
+                </form>
+                <div id="response-message" class="response-message"></div>
+              </div>
+            </div>
+        </div>
+        
+        <script>
+        // JavaScript code to handle form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+        
+            const formData = new FormData(this);
+            const data = {};
+            
+            formData.forEach((value, key) => {
+                data[key] = value; // Convert FormData to a regular object
+            });
+        
+            fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', { // Replace with your Google Apps Script URL
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('response-message').innerText = 'Your message has been sent successfully!';
+                document.getElementById('contact-form').reset(); // Reset the form
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                document.getElementById('response-message').innerText = 'There was an error sending your message.';
+            });
+        });
+        </script>
+        </body>
+        </section>
+        
+  
+        
+     <!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  
+<footer>
+    <address>
+      <p>Address:</p>
+      <p style="color: aliceblue; font-size: 15px;">
+        Maths IIT Center, Eknath Rang Mandir Rd, opp. Sant, below Laptop Bazar, Chhat, New Usmanpura
+        Chattrapati Sambhajinagar
+      </p>
+      <p style="color: aliceblue;">Phone No :099706 03939</p>
+      <p style="color: aliceblue;">Email : gyansaimathsiitcentertech@gmail.com</p>
+      <p style="color: aliceblue;">Website: https://gyansaimathsiitcenter.co.in</p>
+    </address>
+    <div class="footer">
+      <div class="row-w">
+        <p>Follow Us:</p>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+      </div>
+      <div class="row-w">
+        <ul>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+      <div class="row-w">
+        Copyright &copy; 2025 - All rights reserved || Designed By: Finsoft Digital
+      </div>
+    </div>
+  </footer>
