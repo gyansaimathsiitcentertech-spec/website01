@@ -494,7 +494,7 @@ body{
   .row {
     display: flex;
     flex-wrap: nowrap;
-    gap: -6px;
+    gap: 5px;
     flex-direction: unset;
 }
 
