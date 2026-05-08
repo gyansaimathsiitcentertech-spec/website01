@@ -735,33 +735,178 @@
           }
         </style>
 
-        <form id="contact-form">
-          <div class="container-block form-wrapper">
-            <div class="mob-text">
-              <p class="text-blk contactus-head">Get in Touch</p>
-              <p class="text-blk contactus-subhead"></p>
-            </div>
-            <div class="responsive-container-block" id="i2cbk">
-              <div class="responsive-cell-block" id="i10mt-3">
-                <p class="text-blk input-title">FIRST NAME</p>
-                <input class="input" id="ijowk-3" name="FirstName" placeholder="Please enter first name..." required />
-              </div>
-              <div class="responsive-cell-block" id="ip1yp">
-                <p class="text-blk input-title">EMAIL</p>
-                <input class="input" id="ipmgh-3" name="Email" placeholder="Please enter email..." required type="email" />
-              </div>
-              <div class="responsive-cell-block" id="ih9wi">
-                <p class="text-blk input-title">PHONE NUMBER</p>
-                <input class="input" id="imgis-3" name="PhoneNumber" placeholder="Please enter phone number..." required type="tel" />
-              </div>
-              <div class="responsive-cell-block" id="i634i-3">
-                <p class="text-blk input-title">WHAT DO YOU HAVE IN MIND?</p>
-                <textarea class="textinput" id="i5vyy-3" name="Message" placeholder="Please enter query..." required></textarea>
-              </div>
-            </div>
-            <button type="submit" class="submit-btn">Submit</button>
-          </div>
-        </form>
+      <form id="contact-form">
+
+  <div class="container-block form-wrapper">
+
+    <div class="mob-text">
+      <p class="text-blk contactus-head">
+        Get in Touch
+      </p>
+
+      <p class="text-blk contactus-subhead">
+        Contact GYANSAI MATHS IIT CENTER
+      </p>
+    </div>
+
+    <div class="responsive-container-block" id="i2cbk">
+
+      <div class="responsive-cell-block" id="i10mt-3">
+
+        <p class="text-blk input-title">
+          FULL NAME
+        </p>
+
+        <input
+          class="input"
+          id="ijowk-3"
+          name="FirstName"
+          placeholder="Please enter full name..."
+          required
+        />
+
+      </div>
+
+      <div class="responsive-cell-block" id="ip1yp">
+
+        <p class="text-blk input-title">
+          EMAIL
+        </p>
+
+        <input
+          class="input"
+          id="ipmgh-3"
+          name="Email"
+          placeholder="Please enter email..."
+          required
+          type="email"
+        />
+
+      </div>
+
+      <div class="responsive-cell-block" id="ih9wi">
+
+        <p class="text-blk input-title">
+          PHONE NUMBER
+        </p>
+
+        <input
+          class="input"
+          id="imgis-3"
+          name="PhoneNumber"
+          placeholder="Please enter phone number..."
+          required
+          type="tel"
+        />
+
+      </div>
+
+      <div class="responsive-cell-block" id="i634i-3">
+
+        <p class="text-blk input-title">
+          WHAT DO YOU HAVE IN MIND?
+        </p>
+
+        <textarea
+          class="textinput"
+          id="i5vyy-3"
+          name="Message"
+          placeholder="Please enter query..."
+          required
+        ></textarea>
+
+      </div>
+
+    </div>
+
+    <button type="submit" class="submit-btn" id="submitBtn">
+      Send Message
+    </button>
+
+  </div>
+
+</form>
+
+<!-- SUCCESS POPUP -->
+
+<div class="success-popup" id="successPopup">
+
+  <div class="popup-box">
+
+    <div class="popup-check">
+      ✓
+    </div>
+
+    <h2>Message Sent Successfully!</h2>
+
+    <p>
+      Thank you for contacting
+      GYANSAI MATHS IIT CENTER.
+    </p>
+
+    <button onclick="closePopup()">
+      OK
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+
+const form = document.getElementById("contact-form");
+const popup = document.getElementById("successPopup");
+const submitBtn = document.getElementById("submitBtn");
+
+form.addEventListener("submit", async function(event){
+
+  event.preventDefault();
+
+  submitBtn.innerHTML = "Sending...";
+  submitBtn.disabled = true;
+
+  const formData = new FormData(form);
+
+  try{
+
+    const response = await fetch(
+      "https://formbold.com/s/oeKkg",
+      {
+        method:"POST",
+        body:formData
+      }
+    );
+
+    if(response.ok){
+
+      popup.style.display = "flex";
+
+      form.reset();
+
+    }else{
+
+      alert("Something went wrong!");
+
+    }
+
+  }catch(error){
+
+    alert("Error sending message!");
+
+  }
+
+  submitBtn.innerHTML = "Send Message";
+  submitBtn.disabled = false;
+
+});
+
+function closePopup(){
+
+  popup.style.display = "none";
+
+}
+
+</script>
         <div id="response-message" class="response-message"></div>
       </div>
     </div>
