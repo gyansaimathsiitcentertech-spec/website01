@@ -106,33 +106,93 @@
   }
   </script>
 
-  <!-- ================= POPUP CSS ================= -->
-  <!-- POPUP CSS -->
+ <!-- INQUIRY FORM -->
+<div class="popup-overlay" id="popup">
+
+  <div class="popup-box">
+
+    <!-- CLOSE BUTTON -->
+    <button class="popup-close" onclick="closePopup()">
+      ×
+    </button>
+
+    <h2>Inquiry Form</h2>
+
+    <p>
+      Join GYANSAI MATHS IIT CENTER today!
+    </p>
+
+    <form id="inquiryForm">
+
+      <input 
+        type="text" 
+        class="popup-input" 
+        placeholder="Enter Your Name" 
+        required
+      >
+
+      <input 
+        type="tel" 
+        class="popup-input" 
+        placeholder="Enter Mobile Number" 
+        required
+      >
+
+      <input 
+        type="text" 
+        class="popup-input" 
+        placeholder="Class (11th / 12th)"
+      >
+
+      <button type="submit" class="popup-submit">
+        Submit Inquiry
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
 <style>
-  .popup-overlay {
+
+  .popup-overlay{
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
     background: rgba(0,0,0,0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 99999;
-    padding: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    padding:10px;
   }
 
   .popup-box {
-    position: relative;
+    position:relative;
     background: #fff;
     border-radius: 15px;
     max-width: 450px;
     width: 100%;
     padding: 30px 25px;
-    animation: popupScale 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     text-align: center;
+  }
+
+  .popup-close{
+    position:absolute;
+    top:-12px;
+    right:-12px;
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:50%;
+    background:red;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
   }
 
   .popup-box h2 {
@@ -172,84 +232,28 @@
     background: #0056b3;
   }
 
-  .popup-close {
-    position: absolute;
-    top: -12px;
-    right: -12px;
-    background: red;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: none;
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-  }
-
-  @keyframes popupScale {
-    from {
-      transform: scale(0.7);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
-  }
-
-  @media(max-width:480px){
-    .popup-box{
-      padding:20px;
-    }
-
-    .popup-box h2{
-      font-size:22px;
-    }
-  }
 </style>
 
-<!-- POPUP HTML -->
-<div class="popup-overlay" id="popup">
+<script>
 
-  <div class="popup-box">
+  // CLOSE POPUP MANUALLY
+  function closePopup(){
+    document.getElementById("popup").style.display = "none";
+  }
 
-    <button class="popup-close" onclick="closePopup()">
-      ×
-    </button>
+  // AUTO CLOSE AFTER FORM SUBMIT
+  document.getElementById("inquiryForm").addEventListener("submit", function(e){
 
-    <h2>Inquiry Form</h2>
+    e.preventDefault();
 
-    <p>
-      Join GYANSAI MATHS IIT CENTER today!
-    </p>
+    alert("Inquiry Submitted Successfully!");
 
-    <form>
+    // AUTO REMOVE POPUP
+    document.getElementById("popup").style.display = "none";
 
-      <input 
-        type="text" 
-        class="popup-input" 
-        placeholder="Enter Your Name" 
-        required
-      >
+  });
 
-      <input 
-        type="tel" 
-        class="popup-input" 
-        placeholder="Enter Mobile Number" 
-        required
-      >
-
-      <input 
-        type="text" 
-        class="popup-input" 
-        placeholder="Class (11th / 12th)"
-      >
-
-      <button type="submit" class="popup-submit">
-        Submit Inquiry
-      </button>
-
+</script>
     </form>
 
   </div>
