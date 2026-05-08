@@ -105,31 +105,21 @@
     ]
   }
   </script>
-<!-- POPUP INQUIRY FORM -->
 
-<script>
+  <script>
   // AUTO OPEN AFTER 3 SECONDS
   window.onload = function () {
-
-    if (!localStorage.getItem("popupClosed")) {
-
-      setTimeout(() => {
-        document.getElementById("popupForm").style.display = "flex";
-      }, 3000);
-
-    }
-
+    setTimeout(() => {
+      document.getElementById("popupForm").style.display = "flex";
+    }, 3000);
   };
 
   // CLOSE POPUP
   function closePopup() {
-
     document.getElementById("popupForm").style.display = "none";
-
-    localStorage.setItem("popupClosed", "true");
   }
 
-  // FORM SUBMIT WITHOUT REDIRECT
+  // SUBMIT FORM WITHOUT REDIRECT
   document.getElementById("inquiryForm")
     .addEventListener("submit", async function(e) {
 
@@ -155,21 +145,20 @@
           </h3>
         `;
 
-        localStorage.setItem("popupClosed", "true");
-
-        // AUTO CLOSE AFTER 2 SECONDS
+        // AUTO CLOSE
         setTimeout(() => {
           closePopup();
         }, 2000);
 
       } catch (error) {
 
-        alert("Something went wrong. Please try again.");
+        alert("Something went wrong!");
 
       }
 
     });
-</script>  <style>
+</script>
+ <style>
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
