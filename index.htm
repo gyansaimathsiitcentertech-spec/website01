@@ -795,7 +795,7 @@
           }
         </style>
 
-     <!-- ================= CONTACT US SECTION START ================= -->
+  <!-- ================= CONTACT US SECTION START ================= -->
 
 <section class="contact-section">
   <div class="contact-container">
@@ -807,9 +807,9 @@
       <h2>Get In Touch With <br> GYANSAI MATHS IIT CENTER</h2>
 
       <p>
-        Contact us for admission inquiries, IIT-JEE preparation,
-        11th & 12th Science Maths coaching, MHT-CET guidance,
-        and career counseling.
+        Contact us for admission inquiries,
+        11th & 12th Science Maths coaching,
+        MHT-CET guidance, and career counseling.
       </p>
 
       <div class="contact-details">
@@ -847,7 +847,8 @@
     <!-- RIGHT SIDE -->
     <div class="contact-right">
 
-      <form action="https://formbold.com/s/oeKkg" method="POST">
+      <!-- UPDATED FORM -->
+      <form id="contactForm">
 
         <div class="input-group">
           <input type="text" name="name" required>
@@ -869,7 +870,7 @@
           <label>Your Message</label>
         </div>
 
-        <button type="submit" class="contact-btn">
+        <button type="submit" class="contact-btn" id="submitBtn">
           Send Message
         </button>
 
@@ -879,6 +880,27 @@
 
   </div>
 </section>
+
+<!-- SUCCESS POPUP -->
+
+<div id="successPopup" class="popup-success">
+  <div class="popup-content">
+
+    <div class="check-icon">✓</div>
+
+    <h3>Message Sent Successfully!</h3>
+
+    <p>
+      Thank you for contacting
+      GYANSAI MATHS IIT CENTER.
+    </p>
+
+    <button onclick="closePopup()">
+      OK
+    </button>
+
+  </div>
+</div>
 
 <!-- ================= CONTACT US SECTION END ================= -->
 
@@ -1053,6 +1075,81 @@
   box-shadow:0 8px 20px rgba(0,102,255,0.3);
 }
 
+/* SUCCESS POPUP */
+
+.popup-success{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  background:rgba(0,0,0,0.6);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:99999;
+}
+
+.popup-content{
+  background:#fff;
+  width:90%;
+  max-width:400px;
+  text-align:center;
+  padding:35px 25px;
+  border-radius:18px;
+  animation:popupAnim 0.3s ease;
+}
+
+.check-icon{
+  width:80px;
+  height:80px;
+  background:#28a745;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:40px;
+  margin:0 auto 20px;
+}
+
+.popup-content h3{
+  font-size:28px;
+  color:#081c3a;
+  margin-bottom:10px;
+}
+
+.popup-content p{
+  color:#666;
+  margin-bottom:25px;
+  line-height:26px;
+}
+
+.popup-content button{
+  background:#0066ff;
+  color:#fff;
+  border:none;
+  padding:12px 30px;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:16px;
+}
+
+.popup-content button:hover{
+  background:#004ecc;
+}
+
+@keyframes popupAnim{
+  from{
+    transform:scale(0.7);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
 /* MOBILE RESPONSIVE */
 
 @media(max-width:991px){
@@ -1102,4 +1199,59 @@
 
 }
 
+/* ================= FORM SCRIPT ================= */
+
 </style>
+
+<script>
+
+const form = document.getElementById("contactForm");
+const popup = document.getElementById("successPopup");
+const submitBtn = document.getElementById("submitBtn");
+
+form.addEventListener("submit", async function(e){
+
+  e.preventDefault();
+
+  submitBtn.innerHTML = "Sending...";
+  submitBtn.disabled = true;
+
+  const formData = new FormData(form);
+
+  try{
+
+    const response = await fetch("https://formbold.com/s/oeKkg", {
+      method: "POST",
+      body: formData
+    });
+
+    if(response.ok){
+
+      popup.style.display = "flex";
+
+      form.reset();
+
+    } else {
+
+      alert("Something went wrong!");
+
+    }
+
+  } catch(error){
+
+    alert("Error submitting form!");
+
+  }
+
+  submitBtn.innerHTML = "Send Message";
+  submitBtn.disabled = false;
+
+});
+
+function closePopup(){
+
+  popup.style.display = "none";
+
+}
+
+</script>
