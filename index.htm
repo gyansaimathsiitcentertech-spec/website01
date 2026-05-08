@@ -107,78 +107,171 @@
   </script>
 
   <!-- ================= POPUP CSS ================= -->
-  <style>
-    .popup-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0,0,0,0.7);
-      display: none !important;
-      visibility: hidden !important;
-      opacity: 0 !important;
-      pointer-events: none !important;
-      justify-content: center;
-      align-items: center;
-      z-index: 99999;
-      padding: 10px;
+  <!-- POPUP CSS -->
+<style>
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    padding: 10px;
+  }
+
+  .popup-box {
+    position: relative;
+    background: #fff;
+    border-radius: 15px;
+    max-width: 450px;
+    width: 100%;
+    padding: 30px 25px;
+    animation: popupScale 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    text-align: center;
+  }
+
+  .popup-box h2 {
+    color: #111;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+
+  .popup-box p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .popup-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  .popup-submit {
+    width: 100%;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .popup-submit:hover {
+    background: #0056b3;
+  }
+
+  .popup-close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: red;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  }
+
+  @keyframes popupScale {
+    from {
+      transform: scale(0.7);
+      opacity: 0;
     }
-    .popup-box {
-      position: relative;
-      background: #fff;
-      border-radius: 12px;
-      max-width: 500px;
-      width: 100%;
-      animation: popupScale 0.3s ease;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    to {
+      transform: scale(1);
+      opacity: 1;
     }
-    .popup-img {
-      width: 100%;
-      border-radius: 12px 12px 0 0;
+  }
+
+  @media(max-width:480px){
+    .popup-box{
+      padding:20px;
     }
-    .popup-close {
-      position: absolute;
-      top: -12px;
-      right: -12px;
-      background: #ff0000;
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      border: none;
-      color: #fff;
-      font-size: 22px;
-      cursor: pointer;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+
+    .popup-box h2{
+      font-size:22px;
     }
-    .popup-btn {
-      display: block;
-      background: #007bff;
-      color: #fff;
-      padding: 12px 15px;
-      text-align: center;
-      font-size: 16px;
-      text-decoration: none;
-      border-radius: 0 0 12px 12px;
-      font-weight: bold;
-    }
-    .popup-btn:hover {
-      background: #0056b3;
-    }
-    @keyframes popupScale {
-      from { transform: scale(0.7); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-    @media (max-width: 480px) {
-      .popup-box {
-        max-width: 95%;
-      }
-      .popup-btn {
-        font-size: 14px;
-        padding: 10px;
-      }
-    }
-  </style>
+  }
+</style>
+
+<!-- POPUP HTML -->
+<div class="popup-overlay" id="popup">
+
+  <div class="popup-box">
+
+    <button class="popup-close" onclick="closePopup()">
+      ×
+    </button>
+
+    <h2>Inquiry Form</h2>
+
+    <p>
+      Join GYANSAI MATHS IIT CENTER today!
+    </p>
+
+    <form>
+
+      <input 
+        type="text" 
+        class="popup-input" 
+        placeholder="Enter Your Name" 
+        required
+      >
+
+      <input 
+        type="tel" 
+        class="popup-input" 
+        placeholder="Enter Mobile Number" 
+        required
+      >
+
+      <input 
+        type="text" 
+        class="popup-input" 
+        placeholder="Class (11th / 12th)"
+      >
+
+      <button type="submit" class="popup-submit">
+        Submit Inquiry
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+
+  // AUTO OPEN POPUP AFTER 2 SECONDS
+  window.onload = function () {
+    setTimeout(function () {
+      document.getElementById("popup").style.display = "flex";
+    }, 2000);
+  };
+
+  // CLOSE POPUP
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+
+</script>
 
   <style>
     .whatsapp-float {
