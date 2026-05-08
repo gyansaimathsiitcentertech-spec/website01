@@ -107,7 +107,154 @@
   </script>
 
  
+<!-- INQUIRY FORM -->
+<div class="popup-overlay" id="popup">
 
+  <div class="popup-box">
+
+    <!-- CLOSE BUTTON -->
+    <button class="popup-close" onclick="closePopup()">
+      ×
+    </button>
+
+    <h2>Inquiry Form</h2>
+
+    <p>
+      Join GYANSAI MATHS IIT CENTER today!
+    </p>
+
+    <form id="inquiryForm">
+
+      <input 
+        type="text" 
+        class="popup-input" 
+        placeholder="Enter Your Name" 
+        required
+      >
+
+      <input 
+        type="tel" 
+        class="popup-input" 
+        placeholder="Enter Mobile Number" 
+        required
+      >
+
+      <input 
+        type="text" 
+        class="popup-input" 
+        placeholder="Class (11th / 12th)"
+      >
+
+      <button type="submit" class="popup-submit">
+        Submit Inquiry
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+<style>
+
+  .popup-overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background: rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    padding:10px;
+  }
+
+  .popup-box {
+    position:relative;
+    background: #fff;
+    border-radius: 15px;
+    max-width: 450px;
+    width: 100%;
+    padding: 30px 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+
+  .popup-close{
+    position:absolute;
+    top:-12px;
+    right:-12px;
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:50%;
+    background:red;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+  }
+
+  .popup-box h2 {
+    color: #111;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
+
+  .popup-box p {
+    color: #555;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .popup-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  .popup-submit {
+    width: 100%;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .popup-submit:hover {
+    background: #0056b3;
+  }
+
+</style>
+
+<script>
+
+  // CLOSE POPUP MANUALLY
+  function closePopup(){
+    document.getElementById("popup").style.display = "none";
+  }
+
+  // AUTO CLOSE AFTER FORM SUBMIT
+  document.getElementById("inquiryForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    alert("Inquiry Submitted Successfully!");
+
+    // AUTO REMOVE POPUP
+    document.getElementById("popup").style.display = "none";
+
+  });
+
+</script>
 
   <style>
     .whatsapp-float {
