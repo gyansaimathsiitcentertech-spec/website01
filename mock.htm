@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>GYANSAI MATHS IIT CENTER - Test Series</title>
+  <title>GYANSAI TEST PORTAL</title>
 
   <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,340 +20,350 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #071c3f;
-      overflow-x: hidden;
+    body{
+      font-family:'Montserrat',sans-serif;
+      background:#071c3f;
+      overflow-x:hidden;
     }
 
-    /* =========================
+    a{
+      text-decoration:none;
+    }
+
+    /* =======================
        HEADER
-    ========================== */
+    ======================== */
 
-    .top-header {
-      width: 100%;
-      background: rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 999;
+    .header{
+      width:100%;
+      background:rgba(255,255,255,0.06);
+      backdrop-filter:blur(12px);
+      position:sticky;
+      top:0;
+      z-index:999;
+      border-bottom:1px solid rgba(255,255,255,0.08);
     }
 
-    .navbar {
-      max-width: 1300px;
-      margin: auto;
-      padding: 16px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    .navbar{
+      max-width:1300px;
+      margin:auto;
+      padding:16px 20px;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:14px;
     }
 
-    .logo img {
-      width: 70px;
-      height: 70px;
-      border-radius: 14px;
-      object-fit: cover;
-      background: #fff;
-      padding: 4px;
+    .logo img{
+      width:70px;
+      height:70px;
+      border-radius:16px;
+      object-fit:cover;
+      background:#fff;
+      padding:4px;
     }
 
-    .logo h2 {
-      color: #fff;
-      font-size: 22px;
-      font-weight: 800;
-      line-height: 1.3;
+    .logo h2{
+      color:#fff;
+      font-size:24px;
+      font-weight:800;
     }
 
-    .logo span {
-      color: #F5B921;
+    .logo span{
+      color:#F5B921;
     }
 
-    /* =========================
-       HERO SECTION
-    ========================== */
+    /* =======================
+       HERO
+    ======================== */
 
-    .hero {
-      width: 100%;
-      min-height: 320px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 70px 20px 40px;
+    .hero{
+      width:100%;
+      min-height:350px;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+
+      padding:70px 20px;
+
       background:
-        linear-gradient(rgba(7, 28, 63, 0.88),
-          rgba(7, 28, 63, 0.92)),
-        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop') center/cover;
+      linear-gradient(rgba(7,28,63,.88),
+      rgba(7,28,63,.92)),
+      url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1600&auto=format&fit=crop') center/cover;
     }
 
-    .hero-content h1 {
-      color: #fff;
-      font-size: 58px;
-      font-weight: 800;
-      margin-bottom: 20px;
+    .hero-content h1{
+      color:#fff;
+      font-size:62px;
+      font-weight:800;
+      margin-bottom:20px;
     }
 
-    .hero-content h1 span {
-      color: #F5B921;
+    .hero-content h1 span{
+      color:#F5B921;
     }
 
-    .hero-content p {
-      color: #d8d8d8;
-      font-size: 20px;
-      max-width: 850px;
-      margin: auto;
-      line-height: 1.7;
+    .hero-content p{
+      color:#d9d9d9;
+      font-size:20px;
+      max-width:850px;
+      margin:auto;
+      line-height:1.8;
     }
 
-    /* =========================
-       BUTTON SECTION
-    ========================== */
+    /* =======================
+       PORTAL SECTION
+    ======================== */
 
-    .exam-section {
-      width: 100%;
-      padding: 90px 20px;
-      position: relative;
+    .portal-section{
+      padding:90px 20px;
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 60px;
+    .section-title{
+      text-align:center;
+      margin-bottom:70px;
     }
 
-    .section-title h2 {
-      color: #fff;
-      font-size: 44px;
-      font-weight: 800;
-      margin-bottom: 15px;
+    .section-title h2{
+      color:#fff;
+      font-size:48px;
+      font-weight:800;
+      margin-bottom:15px;
     }
 
-    .section-title p {
-      color: #d2d2d2;
-      font-size: 18px;
+    .section-title p{
+      color:#d0d0d0;
+      font-size:18px;
     }
 
-    .button-grid {
-      max-width: 1300px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
+    .portal-grid{
+      max-width:1300px;
+      margin:auto;
+
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+      gap:35px;
     }
 
-    /* =========================
-       BUTTON UI
-    ========================== */
+    /* =======================
+       CARD
+    ======================== */
 
-    .exam-btn {
-      position: relative;
-      overflow: hidden;
-      text-decoration: none;
-      padding: 24px 25px;
-      border-radius: 24px;
+    .portal-card{
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.12);
 
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius:28px;
 
-      backdrop-filter: blur(14px);
+      overflow:hidden;
 
-      color: #fff;
+      backdrop-filter:blur(12px);
 
-      transition: all .45s ease;
+      transition:.4s ease;
 
       box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.25);
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      0 12px 30px rgba(0,0,0,.25);
     }
 
-    /* Glow */
-
-    .exam-btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -120%;
-      width: 100%;
-      height: 100%;
-
-      background:
-        linear-gradient(120deg,
-          transparent,
-          rgba(255, 255, 255, 0.35),
-          transparent);
-
-      transition: .8s;
-    }
-
-    .exam-btn:hover::before {
-      left: 120%;
-    }
-
-    .exam-btn:hover {
-      transform: translateY(-10px) scale(1.03);
-
-      background:
-        linear-gradient(135deg,
-          #F5B921,
-          #ffd95e);
-
-      color: #071c3f;
-
+    .portal-card:hover{
+      transform:translateY(-10px);
       box-shadow:
-        0 22px 45px rgba(245, 185, 33, 0.45);
+      0 22px 50px rgba(0,0,0,.4);
     }
 
-    .exam-btn.neet:hover {
+    .card-header{
+      padding:30px;
+
       background:
-        linear-gradient(135deg,
-          #00c853,
-          #69f0ae);
+      linear-gradient(135deg,
+      #F5B921,
+      #ffd95c);
 
-      color: #fff;
+      color:#071c3f;
     }
 
-    .exam-left {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      z-index: 2;
+    .card-header i{
+      font-size:42px;
+      margin-bottom:15px;
     }
 
-    .exam-icon {
-      width: 58px;
-      height: 58px;
-      border-radius: 16px;
-
-      background: rgba(255, 255, 255, 0.15);
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      font-size: 24px;
+    .card-header h3{
+      font-size:30px;
+      font-weight:800;
+      margin-bottom:10px;
     }
 
-    .exam-text h3 {
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 5px;
+    .card-header p{
+      font-size:15px;
+      font-weight:600;
     }
 
-    .exam-text p {
-      font-size: 14px;
-      opacity: .85;
+    /* =======================
+       BUTTON AREA
+    ======================== */
+
+    .card-body{
+      padding:30px;
     }
 
-    .arrow {
-      font-size: 22px;
-      z-index: 2;
+    .test-btn{
+      width:100%;
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      padding:18px 22px;
+      margin-bottom:18px;
+
+      border-radius:18px;
+
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.08);
+
+      color:#fff;
+
+      transition:.35s ease;
     }
 
-    /* =========================
+    .test-btn:hover{
+      transform:translateX(6px);
+
+      background:
+      linear-gradient(135deg,
+      #0f4fc7,
+      #1f77ff);
+
+      border-color:transparent;
+    }
+
+    .test-btn span{
+      display:flex;
+      align-items:center;
+      gap:14px;
+
+      font-size:16px;
+      font-weight:700;
+    }
+
+    .test-btn i{
+      font-size:18px;
+    }
+
+    /* =======================
+       YEAR BUTTONS
+    ======================== */
+
+    .year-box{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:15px;
+      margin-top:15px;
+    }
+
+    .year-btn{
+      padding:16px;
+
+      border-radius:16px;
+
+      background:
+      linear-gradient(135deg,
+      rgba(245,185,33,.18),
+      rgba(255,255,255,.05));
+
+      border:1px solid rgba(255,255,255,.1);
+
+      text-align:center;
+
+      color:#fff;
+
+      font-weight:700;
+
+      transition:.35s ease;
+    }
+
+    .year-btn:hover{
+      background:
+      linear-gradient(135deg,
+      #F5B921,
+      #ffd95c);
+
+      color:#071c3f;
+
+      transform:translateY(-4px);
+    }
+
+    /* =======================
        FOOTER
-    ========================== */
+    ======================== */
 
-    .footer {
-      width: 100%;
-      padding: 30px 20px;
-      text-align: center;
-      background: #05152f;
-      border-top: 1px solid rgba(255,255,255,0.08);
+    .footer{
+      width:100%;
+      padding:30px 20px;
+
+      background:#05152f;
+
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,.08);
     }
 
-    .footer p {
-      color: #b9b9b9;
-      font-size: 15px;
-      line-height: 1.7;
+    .footer p{
+      color:#bdbdbd;
+      font-size:15px;
+      line-height:1.7;
     }
 
-    .footer span {
-      color: #F5B921;
-      font-weight: 700;
+    .footer span{
+      color:#F5B921;
+      font-weight:700;
     }
 
-    /* =========================
+    /* =======================
        MOBILE
-    ========================== */
+    ======================== */
 
-    @media(max-width:900px) {
+    @media(max-width:768px){
 
-      .hero-content h1 {
-        font-size: 42px;
+      .hero-content h1{
+        font-size:40px;
       }
 
-      .hero-content p {
-        font-size: 17px;
+      .hero-content p{
+        font-size:16px;
       }
 
-      .section-title h2 {
-        font-size: 34px;
+      .section-title h2{
+        font-size:34px;
       }
+
+      .portal-grid{
+        grid-template-columns:1fr;
+      }
+
+      .card-header h3{
+        font-size:25px;
+      }
+
+      .year-box{
+        grid-template-columns:1fr;
+      }
+
     }
 
-    @media(max-width:600px) {
-
-      .navbar {
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      .logo {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .hero {
-        min-height: auto;
-        padding: 60px 20px;
-      }
-
-      .hero-content h1 {
-        font-size: 34px;
-      }
-
-      .hero-content p {
-        font-size: 15px;
-      }
-
-      .exam-btn {
-        padding: 20px;
-      }
-
-      .exam-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-      }
-
-      .exam-text h3 {
-        font-size: 17px;
-      }
-
-      .section-title h2 {
-        font-size: 28px;
-      }
-
-      .section-title p {
-        font-size: 15px;
-      }
-    }
   </style>
 </head>
 
@@ -361,18 +371,22 @@
 
   <!-- HEADER -->
 
-  <header class="top-header">
+  <header class="header">
+
     <nav class="navbar">
 
       <div class="logo">
-        <img src="sai.jpeg" alt="GYANSAI Logo">
+
+        <img src="sai.jpeg" alt="Logo">
 
         <h2>
-          GYANSAI <span>MATHS IIT CENTER</span>
+          GYANSAI <span>TEST PORTAL</span>
         </h2>
+
       </div>
 
     </nav>
+
   </header>
 
   <!-- HERO -->
@@ -382,169 +396,216 @@
     <div class="hero-content">
 
       <h1>
-        Premium <span>Test Series Portal</span>
+        Premium <span>Maths Test Portal</span>
       </h1>
 
       <p>
-        Prepare for JEE Main, JEE Advanced, MHT CET and NEET with
-        India's best premium online test platform designed for
-        serious aspirants.
+        Chapter Wise Tests • Year Wise Papers • Full Syllabus Tests • PYQ Practice
+        for JEE Main, JEE Advanced & MHT-CET
       </p>
 
     </div>
 
   </section>
 
-  <!-- BUTTON SECTION -->
+  <!-- PORTAL -->
 
-  <section class="exam-section">
+  <section class="portal-section">
 
     <div class="section-title">
-      <h2>🚀 Select Your Test Series</h2>
+
+      <h2>🚀 Test Categories</h2>
+
       <p>
-        Choose Your Exam Category & Start Practicing
+        Select Your Practice Module
       </p>
+
     </div>
 
-    <div class="button-grid">
+    <div class="portal-grid">
 
-      <!-- JEE MAIN -->
+      <!-- CHAPTER WISE -->
 
-      <a href="#" class="exam-btn">
+      <div class="portal-card">
 
-        <div class="exam-left">
+        <div class="card-header">
 
-          <div class="exam-icon">
-            <i class="fa-solid fa-calculator"></i>
-          </div>
+          <i class="fa-solid fa-book-open"></i>
 
-          <div class="exam-text">
-            <h3>11th JEE Main Test 1</h3>
-            <p>Physics • Chemistry • Maths</p>
-          </div>
+          <h3>Chapter Wise</h3>
 
-        </div>
-
-        <div class="arrow">
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
-
-      </a>
-
-      <!-- BUTTON -->
-
-      <a href="#" class="exam-btn">
-
-        <div class="exam-left">
-
-          <div class="exam-icon">
-            <i class="fa-solid fa-book-open"></i>
-          </div>
-
-          <div class="exam-text">
-            <h3>11th JEE Main Test 2</h3>
-            <p>Premium Mock Examination</p>
-          </div>
+          <p>
+            Practice Individual Maths Chapters
+          </p>
 
         </div>
 
-        <div class="arrow">
-          <i class="fa-solid fa-arrow-right"></i>
+        <div class="card-body">
+
+          <a href="#" class="test-btn">
+            <span>
+              <i class="fa-solid fa-calculator"></i>
+              JEE Main
+            </span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a href="#" class="test-btn">
+            <span>
+              <i class="fa-solid fa-brain"></i>
+              JEE Advanced
+            </span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a href="#" class="test-btn">
+            <span>
+              <i class="fa-solid fa-chart-line"></i>
+              MHT-CET
+            </span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
         </div>
 
-      </a>
+      </div>
 
-      <!-- ADVANCED -->
+      <!-- YEAR WISE -->
 
-      <a href="#" class="exam-btn">
+      <div class="portal-card">
 
-        <div class="exam-left">
+        <div class="card-header">
 
-          <div class="exam-icon">
-            <i class="fa-solid fa-brain"></i>
-          </div>
+          <i class="fa-solid fa-clock-rotate-left"></i>
 
-          <div class="exam-text">
-            <h3>11th JEE Advanced 1</h3>
-            <p>Advanced Problem Solving</p>
-          </div>
+          <h3>Year Wise</h3>
+
+          <p>
+            Last 5 Years Maths Papers
+          </p>
 
         </div>
 
-        <div class="arrow">
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
+        <div class="card-body">
 
-      </a>
+          <div class="year-box">
 
-      <!-- ADVANCED -->
+            <a href="#" class="year-btn">2025 Paper</a>
 
-      <a href="#" class="exam-btn">
+            <a href="#" class="year-btn">2024 Paper</a>
 
-        <div class="exam-left">
+            <a href="#" class="year-btn">2023 Paper</a>
 
-          <div class="exam-icon">
-            <i class="fa-solid fa-trophy"></i>
-          </div>
+            <a href="#" class="year-btn">2022 Paper</a>
 
-          <div class="exam-text">
-            <h3>11th JEE Advanced 2</h3>
-            <p>Top Rankers Practice Set</p>
+            <a href="#" class="year-btn">2021 Paper</a>
+
           </div>
 
         </div>
 
-        <div class="arrow">
-          <i class="fa-solid fa-arrow-right"></i>
-        </div>
+      </div>
 
-      </a>
+      <!-- FULL SYLLABUS -->
 
-      <!-- NEET -->
+      <div class="portal-card">
 
-      <a href="#" class="exam-btn neet">
+        <div class="card-header">
 
-        <div class="exam-left">
+          <i class="fa-solid fa-layer-group"></i>
 
-          <div class="exam-icon">
-            <i class="fa-solid fa-stethoscope"></i>
-          </div>
+          <h3>Full Syllabus</h3>
 
-          <div class="exam-text">
-            <h3>11th NEET Test 1</h3>
-            <p>Medical Entrance Preparation</p>
-          </div>
+          <p>
+            Complete Maths Mock Tests
+          </p>
 
         </div>
 
-        <div class="arrow">
-          <i class="fa-solid fa-arrow-right"></i>
+        <div class="card-body">
+
+          <a href="#" class="test-btn">
+            <span>
+              <i class="fa-solid fa-rocket"></i>
+              JEE Main Full Test
+            </span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a href="#" class="test-btn">
+            <span>
+              <i class="fa-solid fa-trophy"></i>
+              JEE Advanced Full Test
+            </span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a href="#" class="test-btn">
+            <span>
+              <i class="fa-solid fa-graduation-cap"></i>
+              MHT-CET Full Test
+            </span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
         </div>
 
-      </a>
+      </div>
 
-      <!-- NEET -->
+      <!-- PYQ -->
 
-      <a href="#" class="exam-btn neet">
+      <div class="portal-card">
 
-        <div class="exam-left">
+        <div class="card-header">
 
-          <div class="exam-icon">
-            <i class="fa-solid fa-user-doctor"></i>
-          </div>
+          <i class="fa-solid fa-file-circle-question"></i>
 
-          <div class="exam-text">
-            <h3>11th NEET Test 2</h3>
-            <p>Biology • Physics • Chemistry</p>
-          </div>
+          <h3>PYQ</h3>
+
+          <p>
+            Previous Year Questions Practice
+          </p>
 
         </div>
 
-        <div class="arrow">
-          <i class="fa-solid fa-arrow-right"></i>
+        <div class="card-body">
+
+          <a href="#" class="test-btn">
+            <span>
+              <i class="fa-solid fa-book"></i>
+              JEE Main PYQ
+            </span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a href="#" class="test-btn">
+            <span>
+              <i class="fa-solid fa-lightbulb"></i>
+              JEE Advanced PYQ
+            </span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+          <a href="#" class="test-btn">
+            <span>
+              <i class="fa-solid fa-pen-ruler"></i>
+              MHT-CET PYQ
+            </span>
+
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
         </div>
 
-      </a>
+      </div>
 
     </div>
 
@@ -553,10 +614,12 @@
   <!-- FOOTER -->
 
   <footer class="footer">
+
     <p>
-      © 2026 <span>GYANSAI MATHS IIT CENTER</span> |
-      Designed For Future IITians & Doctors
+      © 2026 <span>GYANSAI TEST PORTAL</span> |
+      Designed For IIT-JEE & MHT-CET Aspirants
     </p>
+
   </footer>
 
 </body>
